@@ -21,9 +21,7 @@ public class AssetManager {
 	private static Vector<Motorcycle> motorcycles = new Vector<>();
 	private static Vector<Gold> golds = new Vector<>();
 	private static Vector<BankAccount> bankAccounts = new Vector<>();
-	
-	Vector assets = new Vector();
-	
+		
 	// Add to the Vector to contains All 
 	public static int addLand(Land land){
 		return lands.add(land) ? 1 : 0;
@@ -56,7 +54,27 @@ public class AssetManager {
 		return new Vector<>(lands);
 	}
 	
+	public static Vector<House> getHouses()
+	{
+		return new Vector<>(houses);
+	}
+	
 	public static Vector<Car> getCars(){
 		return new Vector<>(cars);
+	}
+	
+	public static Vector<Motorcycle> getMotorcycles()
+	{
+		return new Vector<>(motorcycles);
+	}
+	
+	public static Vector<Gold> getGolds()
+	{
+		return new Vector<>(golds);
+	}
+	
+	public static Vector<BankAccount> getBankAccounts()
+	{
+		return new Vector<>(bankAccounts);
 	}
 }

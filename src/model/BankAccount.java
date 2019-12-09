@@ -47,7 +47,15 @@ public class BankAccount extends Saving implements Asset{
 	
 	public double calculateMonetaryValue()
 	{
-		return this.balance * (1 + this.interestRate);
+		double total = 0;
+		
+		try {
+			 total = this.balance * (1 + this.interestRate);
+		}catch(ArithmeticException e) {
+			System.out.println("Please Check Value key in to the system, Error in Calculating your Monetary Value.");
+		}
+		
+		return total;
 	}
 	
 	public void deposit(double amount)

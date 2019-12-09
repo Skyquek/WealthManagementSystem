@@ -5,10 +5,14 @@ import view.AssetManagementSystem;
 import view.AssetView;
 import view.View;
 
+/*
+ * Author: Quek Yao Jing B031810136
+ */
+
 public class AssetManagementSystem extends View {
 	
 	public void displayOptions(){
-        System.out.println("Welcome to Asset Management System");
+        System.out.println("Welcome to Wealth Management System");
         System.out.println("---------------------------------------");
         System.out.println("1 \t Manage Asset");
         System.out.println("0 \t Exit");
@@ -19,18 +23,11 @@ public class AssetManagementSystem extends View {
             case 1: {
                 AssetView av = new AssetView();
                 av.displayOptions();
-                av.selectOption(scanner, 9); // I use '0' as escape character
+                av.selectOption(scanner, 9); 
 
                 displayOptions();
                 break;
 
-            } case 2: {
-                System.out.println("You've selected: Manage Customers");
-                break;
-
-            } case 3: {
-                System.out.println("You're selected: Manage Rentals");
-                break;
             }
         }
     }
@@ -41,7 +38,7 @@ public class AssetManagementSystem extends View {
         AssetManagementSystem assems = new AssetManagementSystem();
 
         assems.displayOptions();
-        assems.selectOption(scanner, 3); // I use '0' as escape character
+        assems.selectOption(scanner, 3); 
     }
 
 }
